@@ -3,16 +3,15 @@
   hosts: local
   become: yes
   tasks:
-  - name: install nginx
-    ansible.builtin.package:
+    - name: install nginx
+      ansible.builtin.package:
         - name: nginx
           state: present
-
-  - name: start service
-    ansible.builtin.service:
+    - name: start service
+      ansible.builtin.service:
         - name: nginx
           state: started
           enabled: yes
-          
+
 
 
