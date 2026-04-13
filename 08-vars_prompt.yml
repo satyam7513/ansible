@@ -1,18 +1,15 @@
 ---
-- name: variables from font 
+- name: variables from font
   hosts: local
   connection: local
   vars_prompt:
-  - name: USERNAME
-    prompt: please enter USERNAME
-    private: true
-
-  - name: PASSWORD
-    prompt: please enter password 
-    private: true
-
-  - tasks: 
-      - name: printing user information
-        ansible.builtin.debug:
-           msg: "Hello username is: {{ USERNAME }}, password is: {{ PASSWORD }}"
-
+    - name: USERNAME
+      prompt: please enter USERNAME
+      private: true
+    - name: PASSWORD
+      prompt: please enter password
+      private: true
+    - tasks:
+        - name: printing user information
+          ansible.builtin.debug:
+            msg: "Hello username is: {{ USERNAME }}, password is: {{ PASSWORD }}"
