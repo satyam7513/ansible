@@ -4,7 +4,7 @@
   connection: local
   vars_prompt:
     - name: USERNAME
-      prompt: please enter USERNAME
+      prompt: please enter username
       private: true
     - name: PASSWORD
       prompt: please enter password
