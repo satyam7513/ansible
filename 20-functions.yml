@@ -37,8 +37,15 @@
     ansible.builtin.debug:
       msg: "Hello {{ name | upper }}"
 
-  - name: convert to uppercase
+  - name: convert to lowercase
     vars:
      name: "SATYAMNAIDU"
     ansible.builtin.debug:
       msg: "Hello {{ name | lower }}"
+
+  - name: check ip address is valid or not
+    vars:
+      ip: "356.456.987.8976"
+    ansible.builtin.debug:
+      msg: "{{ ip | ansible.utils.ipaddr }}"
+      
